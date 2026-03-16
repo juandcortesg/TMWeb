@@ -1,0 +1,55 @@
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 600px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background: #000;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem 2rem 4rem;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay h2 {
+    color: #f5a623;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.show-meta {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: #ddd;
+}
+
+.show-meta span {
+    margin: 0 0.8rem;
+}
+
+.show-summary {
+    max-width: 900px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
