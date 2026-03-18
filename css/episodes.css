@@ -58,36 +58,24 @@
     opacity: 0.9;
 }
 
+.episode-rating {
+    background: #2a2a2a;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 0.6rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.episode-rating span {
+    color: #f5a623;
+}
+
 .episode-summary {
     color: #ccc;
     font-size: 0.92rem;
     line-height: 1.5;
     margin-bottom: 1.2rem;
     flex-grow: 1;
-}
-
-.episode-actions {
-    margin-top: auto;
-    text-align: center;
-}
-
-.episode-actions a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.8rem 1.8rem;
-    background: linear-gradient(135deg, #f5a623, #e69500);
-    color: #000;
-    font-weight: 700;
-    font-size: 0.95rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3);
-}
-
-.episode-actions a:hover {
-    background: linear-gradient(135deg, #ffcc00, #ffb300);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(245, 166, 35, 0.5);
 }

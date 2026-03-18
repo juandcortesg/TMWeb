@@ -32,7 +32,7 @@ function loadSeasons(container) {
         html += `
             <div class="season-card">
                 <img src="${season.image}" 
-                    alt="Póster oficial Temporada ${season.number}" 
+                    alt="Póster Temporada ${season.number}" 
                     class="season-poster"
                     loading="eager">
                 <div class="season-content">
@@ -43,12 +43,9 @@ function loadSeasons(container) {
                     </div>
                     <p class="season-summary">${season.summary || 'Sin resumen disponible'}</p>
                     <div class="season-actions">
-                        <a href="${streamingLink}" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="btn-disney">
-                            Ver en Disney+
-                        </a>
+                        <button class="btn-disney view-episodes-btn" data-season="${season.number}">
+                            Ver episodios
+                        </button>
                     </div>
                 </div>
             </div>
@@ -57,4 +54,11 @@ function loadSeasons(container) {
 
     html += `</div>`;
     container.innerHTML = html;
+
+    container.querySelectorAll('.view-episodes-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const seasonNum = Number(btn.dataset.season);
+            window.loadService('episodes', seasonNum);
+        });
+    });
 }

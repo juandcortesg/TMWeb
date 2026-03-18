@@ -10,7 +10,6 @@ const showData = {
     summary: "Después de las historias de Jango y Boba Fett, surge otro guerrero en el universo de Star Wars. The Mandalorian está ambientada después de la caída del Imperio y antes del surgimiento del Primer Orden. Seguimos las peripecias de un pistolero solitario en los confines exteriores de la galaxia, lejos de la autoridad de la Nueva República..."
 };
 
-
 function loadShow(container) {
     container.innerHTML = `
         <div class="show-container">

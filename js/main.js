@@ -1,12 +1,12 @@
-const streamingLink = "https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD";
+const streamingLink = "https://www.disneyplus.com/series/the-mandaloriano/3jLIGMDYINqD";
 
-document.addEventListener('DOMContentLoaded', () => {
+window.loadService = function(service, param = null) {
     const content = document.getElementById('content');
     const buttons = document.querySelectorAll('.nav-btn');
 
-    function setActiveButton(service) {
+    function setActiveButton(svc) {
         buttons.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.service === service);
+            btn.classList.toggle('active', btn.dataset.service === svc);
         });
     }
 
@@ -18,27 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
         content.innerHTML = `<div class="error">Error: ${message}</div>`;
     }
 
-    function loadService(service, param = null) {
-        showLoading();
-        setActiveButton(service);
+    showLoading();
+    setActiveButton(service);
 
-        try {
-            if (service === 'show') {
-                loadShow(content);
-            } else if (service === 'episodes') {
-                loadEpisodes(content, param);
-            } else if (service === 'seasons') {
-                loadSeasons(content);
-            }
-        } catch (err) {
-            showError(err.message || 'No se pudo cargar el contenido.');
-            console.error(err);
+    try {
+        if (service === 'show') {
+            loadShow(content);
+        } else if (service === 'seasons') {
+            loadSeasons(content);
+        } else if (service === 'episodes') {
+            loadEpisodes(content, param);
         }
+    } catch (err) {
+        showError(err.message || 'No se pudo cargar el contenido.');
+        console.error(err);
     }
+};
 
+document.addEventListener('DOMContentLoaded', () => {
     loadService('show');
 
-    buttons.forEach(btn => {
+    document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const service = btn.dataset.service;
             loadService(service);
