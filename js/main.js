@@ -31,7 +31,6 @@ window.loadService = function(service, param = null) {
         }
     } catch (err) {
         showError(err.message || 'No se pudo cargar el contenido.');
-        console.error(err);
     }
 };
 
@@ -44,4 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             loadService(service);
         });
     });
+
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+    }
 });
