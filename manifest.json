@@ -1,6 +1,6 @@
 {
     "name": "The Mandalorian App",
-    "short_name": "MandoApp",
+    "short_name": "TMandaApp",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#0d0d0d",
