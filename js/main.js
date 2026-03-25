@@ -48,3 +48,33 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.serviceWorker.register("service-worker.js");
     }
 });
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const btn = document.createElement('button');
+    btn.textContent = "Instalar App";
+    btn.style.position = "fixed";
+    btn.style.bottom = "20px";
+    btn.style.right = "20px";
+    btn.style.padding = "12px 20px";
+    btn.style.background = "#f5a623";
+    btn.style.border = "none";
+    btn.style.borderRadius = "8px";
+    btn.style.cursor = "pointer";
+    btn.style.fontWeight = "bold";
+
+    document.body.appendChild(btn);
+
+    btn.addEventListener('click', () => {
+        btn.remove();
+        deferredPrompt.prompt();
+
+        deferredPrompt.userChoice.then(() => {
+            deferredPrompt = null;
+        });
+    });
+});
