@@ -1,4 +1,4 @@
-const CACHE_NAME = "mandalorian-cache-v2";
+const CACHE_NAME = "mandalorian-cache-v1";
 
 const urlsToCache = [
     "/",
