@@ -4,19 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>The Mandalorian • TVmaze</title>
-
-    <meta name="description" content="Explora The Mandalorian: episodios, temporadas y más.">
-    <meta name="theme-color" content="#f5a623">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="TMandaApp">
-
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <link rel="preload" as="image" href="https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-compilation-poster-fb-tw_6ae443d1.jpeg">
-    <link rel="preconnect" href="https://static.tvmaze.com">
-
+    
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/info.css">
@@ -25,39 +13,47 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f5a623">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="header">
-    <div class="container">
-        <h1>The Mandalorian</h1>
-        <p>Información oficial vía TVmaze API</p>
-    </div>
-</header>
+    <header class="header">
+        <div class="container">
+            <h1>The Mandalorian</h1>
+            <p>Información oficial vía TVmaze API</p>
+        </div>
+    </header>
 
-<section class="hero-banner">
-    <img src="https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-compilation-poster-fb-tw_6ae443d1.jpeg"
-        class="hero-image">
-    <div class="hero-overlay">
-        <h2>Esta es la forma</h2>
-        <p>Explora la saga completa en Disney+</p>
-    </div>
-</section>
+    <section class="hero-banner">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-compilation-poster-fb-tw_6ae443d1.jpeg"
+            alt="The Mandalorian - Póster oficial con Mando y Grogu"
+            class="hero-image">
+        <div class="hero-overlay">
+            <h2>Esta es la forma</h2>
+            <p>Explora la saga completa en Disney+</p>
+        </div>
+    </section>
 
-<nav class="nav container">
-    <button class="nav-btn active" data-service="show">Información</button>
-    <button class="nav-btn" data-service="seasons">Temporadas</button>
-</nav>
+    <nav class="nav container">
+        <button class="nav-btn active" data-service="show">Información</button>
+        <button class="nav-btn" data-service="seasons">Temporadas</button>
+    </nav>
 
-<main class="main container" id="content"></main>
+    <main class="main container" id="content">
+        <div class="loading">Cargando información...</div>
+    </main>
 
-<footer>
-    <p>Datos proporcionados por TVmaze • Proyecto fan.</p>
-</footer>
+    <footer class="footer">
+        <p>Datos proporcionados por <a href="https://www.tvmaze.com/" target="_blank" rel="noopener">TVmaze</a> • Proyecto fan.</p>
+    </footer>
 
-<script type="module" src="js/main.js"></script>
+    <script src="js/services/show.js"></script>
+    <script src="js/services/seasons.js"></script>
+    <script src="js/services/episodes.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

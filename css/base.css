@@ -70,7 +70,6 @@ body {
 
 .main {
     padding: 2rem 0 4rem;
-    animation: fadeIn 0.5s ease;
 }
 
 .section-title {
@@ -122,10 +121,6 @@ body {
     background: #ffcc00;
 }
 
-.btn-disney:active {
-    transform: scale(0.95);
-}
-
 footer {
     text-align: center;
     padding: 3rem 0 2rem;
@@ -153,19 +148,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-.hero-image {
-    object-fit: cover;
-}
-
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(10px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
 }
