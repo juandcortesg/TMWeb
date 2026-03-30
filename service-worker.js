@@ -40,7 +40,15 @@ const REMOTE_ASSETS = [
     "https://static.tvmaze.com/uploads/images/medium_landscape/285/713639.jpg",
     "https://static.tvmaze.com/uploads/images/medium_landscape/287/718553.jpg",
     "https://static.tvmaze.com/uploads/images/medium_landscape/289/723954.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135764.jpg"
+    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135764.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/449/1124532.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135761.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135762.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135763.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/455/1138682.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/455/1138684.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/456/1141378.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_landscape/457/1144719.jpg"
 ];
 
 self.addEventListener("install", event => {
