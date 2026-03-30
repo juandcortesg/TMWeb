@@ -1,9 +1,10 @@
-const CACHE_NAME = "mandalorian-cache-v4";
+const CACHE_NAME = "mandalorian-cache-v5";
 const APP_SHELL = [
     "./",
     "./index.html",
     "./offline.html",
     "./manifest.json",
+    "./images/episode-fallback.svg",
     "./css/base.css",
     "./css/hero.css",
     "./css/info.css",
@@ -39,15 +40,7 @@ const REMOTE_ASSETS = [
     "https://static.tvmaze.com/uploads/images/medium_landscape/285/713639.jpg",
     "https://static.tvmaze.com/uploads/images/medium_landscape/287/718553.jpg",
     "https://static.tvmaze.com/uploads/images/medium_landscape/289/723954.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135764.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/449/1124532.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135761.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135762.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135763.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/455/1138682.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/455/1138684.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/456/1141378.jpg",
-    "https://static.tvmaze.com/uploads/images/medium_landscape/457/1144719.jpg"
+    "https://static.tvmaze.com/uploads/images/medium_landscape/454/1135764.jpg"
 ];
 
 self.addEventListener("install", event => {

@@ -1,0 +1,19 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Imagen de respaldo</title>
+  <desc id="desc">Imagen local para episodios cuando la portada remota no este disponible.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b1b1b"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="210" cy="560" r="170" fill="#f5a623" opacity="0.08"/>
+  <circle cx="1030" cy="160" r="120" fill="#f5a623" opacity="0.12"/>
+  <g fill="none" stroke="#f5a623" stroke-width="12" opacity="0.85">
+    <path d="M510 470 L610 250 L670 250 L770 470"/>
+    <path d="M560 370 L720 370"/>
+  </g>
+  <text x="640" y="560" text-anchor="middle" fill="#f5a623" font-family="Arial, sans-serif" font-size="48" font-weight="700">The Mandalorian</text>
+  <text x="640" y="615" text-anchor="middle" fill="#f0f0f0" font-family="Arial, sans-serif" font-size="28">Imagen disponible sin conexion</text>
+</svg>
