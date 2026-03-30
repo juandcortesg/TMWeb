@@ -101,7 +101,21 @@ self.addEventListener("fetch", event => {
 
     if (requestUrl.origin !== self.location.origin) {
         event.respondWith(
-            fetch(event.request).catch(() => caches.match(event.request))
+            caches.match(event.request).then(cachedResponse => {
+                if (cachedResponse) {
+                    return cachedResponse;
+                }
+
+                return fetch(event.request).then(networkResponse => {
+                    if (!networkResponse) {
+                        return networkResponse;
+                    }
+
+                    const responseClone = networkResponse.clone();
+                    caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseClone));
+                    return networkResponse;
+                }).catch(() => caches.match(event.request));
+            })
         );
         return;
     }
